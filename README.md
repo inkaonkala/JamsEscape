@@ -1,13 +1,31 @@
-# JamsEscape
-This little game was created for GameJam in 22hours (divided for 4 days). <br>
-Written in c++ using SFML (version 2.6) <br>
-<br>
-The theme of the gameJam was timeloop. So I created this little jumping game with Jam the Pig that can stop the time. <br> In the game, you need to jump across the enemies. Jam can double jump by the calculated momentum on freezing the time in the air (by pressing space). Longer you press jump, higher Jam will jump. <br> When Jam hits the enemie, he will retun to the start and a ghost will be spawned near the dying spot. 
-<br>
-<br>
-<img width="1222" alt="Screenshot 2025-03-30 at 23 31 33" src="https://github.com/user-attachments/assets/ed870c08-dba0-451b-aca6-7cfb865b676d" />
-<br>
-<br>
-Features:<br> Animated characters <br> Double Jump logic with time stop <br> 4 different enemies (with random spawn) <br> ghost spawn in point of "death" <br> music <br> Multi layerd graphics <br> <br>
-Everything made by me.
+# This is Jam's Escape!
 
+A little jumping game build for the Hive's March Gamejam.
+Made in C++ and SFML (version 2.6)
+
+## How to build?
+
+1. Clone the repo
+2. From the root:
+
+
+   ```bash
+   mkdir build
+   cd build
+   cmake ..
+   make
+
+   ./JamsEscape
+   ```
+
+3. After building, if you get an error like Library not loaded: libsfml-graphics.2.6.dylib, try this:
+
+```
+cp SFML/lib/libsfml-*.dylib .
+./JamsEscape
+
+```
+
+   # to remove
+
+   ``` rm -rf build/ ```
