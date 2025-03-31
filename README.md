@@ -47,7 +47,7 @@ cp SFML/lib/libsfml-*.dylib .
 ./JamsEscape
 ```
 
-   # to remove
+4. To clean
 
    ``` rm -rf build/ ```
 
