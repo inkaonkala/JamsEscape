@@ -14,6 +14,7 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <memory>
 
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>

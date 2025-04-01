@@ -30,8 +30,23 @@ target_link_libraries(JamsEscape
 	sfml-audio
 )
 
-
 set_target_properties(JamsEscape PROPERTIES
-    INSTALL_RPATH "@executable_path"
+    BUILD_RPATH "$ORIGIN"
+    INSTALL_RPATH "$ORIGIN"
     BUILD_WITH_INSTALL_RPATH TRUE
+)
+
+
+# === Copy SFML .so libraries and assets after build ===
+add_custom_command(TARGET JamsEscape POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:JamsEscape>/assets
+    COMMAND ${CMAKE_COMMAND} -E copy
+            ${CMAKE_BINARY_DIR}/SFML/lib/libsfml-graphics.so.2.6 $<TARGET_FILE_DIR:JamsEscape>
+    COMMAND ${CMAKE_COMMAND} -E copy
+            ${CMAKE_BINARY_DIR}/SFML/lib/libsfml-window.so.2.6 $<TARGET_FILE_DIR:JamsEscape>
+    COMMAND ${CMAKE_COMMAND} -E copy
+            ${CMAKE_BINARY_DIR}/SFML/lib/libsfml-system.so.2.6 $<TARGET_FILE_DIR:JamsEscape>
+    COMMAND ${CMAKE_COMMAND} -E copy
+            ${CMAKE_BINARY_DIR}/SFML/lib/libsfml-audio.so.2.6 $<TARGET_FILE_DIR:JamsEscape>
 )

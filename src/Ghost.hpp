@@ -11,6 +11,7 @@
 #ifndef GHOST_HPP
 #define GHOST_HPP
 
+#include <cmath>
 #include "Obs.hpp"
 
 class Ghost : public Obstacle
