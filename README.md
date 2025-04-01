@@ -1,6 +1,6 @@
 <img width="1222" alt="Screenshot 2025-03-30 at 23 31 33" src="https://github.com/user-attachments/assets/5160f6ee-2d94-4b08-9384-ea4c141c2eb6" />
 
-# This is Jam's Escape!
+# This is Jam's Escape! 🐷
 
 A little jumping game build for the Hive's March Gamejam. Total of 22 hours were used to build the game. <br>
 Features: <br> Animated sprites <br> Moving enemies <br> Double jump logic based on how long 'space' is pressed <br> music <br> Enemy spawn from death point logic <br> Point counter <br> All features, graphs and music made by me <br>
